@@ -1,0 +1,48 @@
+<!-- author_detail.html -->
+
+{% extends "base.html" %}
+
+{% block title %}{{ author.first_name }}{% endblock %}
+
+{% block content %}
+<div class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{ author.photo.url }}" class="img-fluid rounded-start" alt="{{ author.first_name }}" style="width:70%; padding:10%;">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h1 class="card-title">{{ author.first_name }} {{ author.last_name }}</h1>
+          <p class="card-text">{{ author.bio | truncatewords:60 }}</p>
+          {% if author.date_of_birth %}
+          <p class="card-text"><small class="text-muted">Born: {{ author.date_of_birth }}</small></p>
+          {% endif %}
+          {% if author.date_of_death %}
+            <p class="card-text"><small class="text-muted">Died: {{ author.date_of_death }}</small></p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% if books %}
+  <h2>Books by {{ author.first_name }} {{ author.last_name }}</h2>
+
+  <ul class="list-group">
+    {% for book in books %}
+      <li class="list-group-item">
+        <div class="row">
+            <div class="col-6">
+               <a href="{% url 'books:detail' book.id %}">{{ book.book.title }}</a>
+            </div>
+            <div class="col-6 text-end">
+                {% if book.book.genre %}<span style="color:blue;"> <b>Genre: </b> {{ book.book.genre }}</span>{% endif%}
+            </div>
+      </li>
+    {% empty %}
+      <li class="list-group-item">No books found.</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  <br>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Profile Page{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-body text-center">
+            <button class="btn" style="background-color:#dfffffff;">
+              <img class="profile-pic" alt="Profile picture" src="{{ user.profile_picture.url }}">
+            </button>
+            <h5 class="card-title mt-3">{{ user.first_name }} {{ user.last_name }}</h5>
+            <p class="card-text">@{{ user.username }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Profile Information</h5>
+            <p class="card-text"><b>Email:</b> {{ user.email }}</p>
+            <p class="card-text"><b>Joined date:</b> {{ user.date_joined | date:"M d, Y" }}</p>
+            <div class="d-flex justify-content-end">
+              <a class="btn btn-primary" href="{% url 'users:profile-edit' %}">Edit Profile</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<br><br><br><br><br><br>
+
+{% endblock %}
