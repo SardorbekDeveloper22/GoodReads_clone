@@ -20,8 +20,8 @@ $  git clone https://github.com/SardorbekDeveloper22/GoodReads_clone.git
 $ pip install -r requirements.txt
 ```
 5. Sozlamalarini o'rnating.
-6. Ma'lumotlar bazasini o'rnatish.
-7. Serverni ishga tushirish.
+6. Ma'lumotlar bazasini o'rnating.
+7. Serverni ishga tushiring.
 
 ## Ishlatilgan Texnologiyalar
 
@@ -32,7 +32,7 @@ $ pip install -r requirements.txt
 
 ## Testlar
 
-Proyektda avtomatlashtirilgan testlar mavjud. Testlar qo'shimcha fayllar o'rnatilmagan holatda quyidagicha ishga tushadi:
+Proyektda avtomatlashtirilgan testlar mavjud. Testlarni ishga tushirish:
 ```bash
 $ python manage.py test
 ```
