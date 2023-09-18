@@ -2,6 +2,21 @@
 
 Bu proyekt Goodreads web saytining kloni. Ushbu proyekt orqali kitoblar haqida ma'lumotlarni ko'rish, ulashish va baholash imkoniyatiga ega bo'lasiz.
 
+## Loyiha bo'limlari
+- Asosiy sahifa
+![Alt Matn](./img/home.png)
+- Kitblar sahifasi
+![Kitoblar](./img/books.png)
+- Har bir kitobning o'z sahifasi
+![Goodreads](./img/booksDetail.png)
+- Mualliflari sahifasi
+![Goodreads](./img/authors.png)
+- Muallifning o'z sahifasi
+![Goodreads](./img/authorsDetail.png)
+- Api qism
+![Goodreads](./img/api.png)
+
+
 ## Muhandis
 
 - Sardorbek Qozoqov (sardorbekqozoqov2281@gmail.com)
@@ -36,4 +51,3 @@ Proyektda avtomatlashtirilgan testlar mavjud. Testlarni ishga tushirish:
 ```bash
 $ python manage.py test
 ```
-
